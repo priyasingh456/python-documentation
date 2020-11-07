@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Python-documentation </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>Python Documentation</header>
+            <ul>
+                <li><a class="nav-link" href="#The_Basics">The Basics</a></li> 
+            
+                <li><a class="nav-link" href="#Indentation">Indentation</a></li>
+                <li><a class="nav-link" href="#The_Hello_World">The Hello World</a></li>
+                <li><a class="nav-link" href="#Variables_and_Types">Variables and Types</a></li>
+                <li><a class="nav-link" href="#Strings">Strings</a></li>
+                <li><a class="nav-link" href="#The_Print_Function">The print Function</a></li>
+            
+                <li><a class="nav-link" href="#Sequences(Data_Structures)">Sequences(Data Structures)</a></li>
+            
+                <li><a class="nav-link" href="#Lists">Lists</a></li>
+                <li><a class="nav-link" href="#Tuples">Tuples</a></li>
+                <li><a class="nav-link" href="#Dictionaries">Dictionaries</a></li>
+                <li><a class="nav-link" href="#Slicing">Slicing</a></li>
+           
+                <li><a class="nav-link" href="#Modules">Modules</a></li>
+                <li><a class="nav-link" href="#Functions">Functions</a></li>
+                <li><a class="nav-link" href="#Iterators">Iterators</a></li>
+                <li><a class="nav-link" href="#Programming(and_Functional_Programming)">Programming (and Functional Programming)</a></li>
+          
+                <li><a class="nav-link" href="#For_loop">For loop</a></li>
+                <li><a class="nav-link" href="#If_condition">If condition</a></li>
+                <li><a class="nav-link" href="#Do_while_loop">Do while loop</a></li>
+                <li><a class="nav-link" href="#Pass_statement">The Pass Statement</a></li> 
+                <li><a class="nav-link" href="#lambda_function">Lambda Function</a></li>
+                <li><a class="nav-link" href="#Zip_function">Zip function</a></li>
+                <li><a class="nav-link" href="#reduce">Reduce function</a></li>
+                <li><a class="nav-link" href="#filter">Filter function</a></li>
+             
+                <li><a class="nav-link" href="#Exceptions">Exception</a></li>
+             
+                <li><a class="nav-link" href="#object_oriented_language">An object oriented language</a></li>
+                <li><a class="nav-link" href="#class">Class</a></li>
+                <li><a class="nav-link" href="#inheritance">Inheritance</a></li>
+             
+                <li><a class="nav-link" href="#statements">Statements</a></li>
+                <li><a class="nav-link" href="#comment">Comment,Boolean</a></li>
+             </ul>
+          </nav>
+      
+      <main id="main-doc">
+          <section class="main-section" id="The_basics">
+          <header>The Basics</header>
+          <section class="main-section" id="Indentation">
+          <header>Indentation</header>
+          <article>
+                <p>Before starting, you need to know that in python, code indentation
+                   is an essential part of the syntax. It is used to delimitate code 
+                   blocks such as loops and function It may seem cumbersome, but it 
+                  makes all python code consistent and readable.the code is incorrect:</p>
+                   <code>a=1
+                          b=2</code>
+                <p>Since the two statements are not aligned despite being part of the
+                    same block of statements (the main block).Instead, they must be 
+                    indented in the same way:</p>
+                   <code>a=1
+                         b=2</code> 
+                <p>Here is another example involving a loop and a function(def):</p>
+                   <code>def example():
+                            #The function starts with an indentation
+                            for i in[1,2,3]: 
+                               #The loop starts with an indentation as well
+                               print i
+                         #calling the function
+                         example()</code>
+           </article>
+          </section>  
+      
+           <section class="main-section" id="The_Hello_World">
+             <header>The Hello World</header>
+               <article> 
+                   <p>In order to print the <em>Hello World</em> string, use the <u>print()</u> function as follows:</p>
+                   <code>>>>print("Hello world")
+                         Hello world</code>
+                   <p>Note that before Python 3, you could use <em>print</em> without brackets:</p>
+                   <code>>>>print"Hello world"
+                         Hello world</code>
+               </article>
+           </section>
+         
+           <section class="main-section" id="Variables_and_Types">
+             <header>Variables and Types</header>
+               <article> 
+                  <p>In the remaining part of this introduction, we will play with a very
+                      simple example that consists in computing the surface of a circle.</p>
+                  <p>First, we need to use some variables. In python, there is no need to
+                     declare variables and therefore there is no need to declare type 
+                     either. In Python, you hardly need to  bother about types but you 
+                     may need cast from time to time. For instance, the following lines 
+                     declare a constant PI and a radius. There are both manipulated as 
+                     float although  we haven't mention it:</p>
+                     <code>pi=3.14
+                       R=1</code>
+                  <p>Now, let us do the maths or using the power sign:</p>
+                     <code>surface=pi*R*R
+                                or
+                           surface=pi*R**2</code>
+                  <p>We can now print the content of the <em>surface</em> variable:</p>
+                     <code>>>>print(surface)
+                              3.14</code> 
+                </article>
+           </section>
+      
+           <section class="main-section" id="Strings">
+              <header>Strings</header>
+                 <article> 
+                    <p>Of course, a more verbose message would be better but first, we need 
+                       to show how to manipulate strings. In Python, they can be declared in 
+                       3 differents ways:</p>
+                       <code>message='The surface of the circle='
+                             message="The surface of the circle="
+                             message="""The surface of the circle=""" </code>
+                    <p>In short, strings in double quotes work exactly the same as in single
+                       quotes but allow to insert single quote character inside them. With 
+                       the triple quotes(''' or """), you can specify multi-line strings.
+                       Moreover, single quotes and double quotes can be used freely within 
+                       the triple quotes.</p>
+                    <p>It is easy to print non-homogeneous data types:</p>
+                       <code>>>>print(message, surface)
+                             The surface of the circle=3.14</code>
+                    <p>Here, notice the , sign. If the surface Variable was a string, you 
+                       could concatenate them using the + sign.</p>
+                    <p>In python, strings are immutable.</p>
+                </article>
+           </section>
+      
+           <section class="main-section" id="The_Print_Function()">
+               <header>The Print Function</header>
+                  <article>
+                    <p>In order to print variables with <u>print()</u> function, as in many 
+                       other languages (eg, C) you will need the special character%. Here we 
+                       use only %s so every variables is casted to a string but you could use 
+                       the standard symbols(eg, %E,%d,...).</p>
+                       <code>print('This is a circle of radius %s'%radius)
+                             print('this is a circle of radius %s and surface %s'%(radius, surface)</code>
+                    <p>When using more than one argument, the print function requires to place 
+                       the arguments in parentheses(this is a <em>tuple</em> as explained later).</p>   
+                  </article>
+           </section>
+      
+           <section class="main-section" id="Sequences(Data_Structures)">
+             <header>Sequences (Data Structures)</header>
+                 <article>
+                    <p>There are lots of data structures in Python and sequences are of
+                        particular interest. Sequences allow to put together items that can 
+                       be accessed to with indexing and slicing methods. You can find mutable 
+                       and immutable sequences.</p>
+                    <p>Note- indices like in C starts at 0 (not 1).</p>
+                 </article>
+           </section>
+        
+           <section class="main-section" id="Lists">
+              <header>Lists</header>
+                 <article>
+                    <p>Lists are mutable sequence. There are created using the square brackets.</p>
+                      <code>>>>radius_list=[1,10]  
+                            >>>radius_list[0]
+                            1</code>
+                    <p>When you assign a variable the value of an existing object, Python makes 
+                       a reference to the existing object. consider the following example:</p>
+                      <code>>>>a=[1,2,3]
+                            >>>b=a
+                            >>>b[0]=10
+                            >>>b
+                            [10,2,3]</code>
+                    <p>a and b are two variables but they refer to the same object in memory.</p>
+                </article>
+           </section>
+      
+           <section class="main-section" id="Tuples">
+              <header>Tuples</header>
+                  <article>
+                    <p>Tuples are immutable sequence. There are created using the normal brackets.</p> 
+                      <code>>>>radius_list=(1,10)
+                            >>>radius_list[0]
+                            1</code>
+                  </article>
+           </section>
+      
+           <section class="main-section" id="Dictionaries">
+              <header>Dictionaries</header>
+                   <article>
+                     <p>Dictionaries are mutable pairs of kay/value. The key must be immutable type
+                        such as strings or numbers. There are defined using curly brackets.</p>
+                       <code>>>>d={'key1':[1,4,3,'p',6], 'key2':16}
+                             >>>d['key2']
+                             16</code>
+                   </article>
+            </section>
+      
+            <section class="main-section" id="Slicing">
+               <header>Slicing</header>
+                   <article>
+                     <p>Let us consider the following list:</p>
+                       <code>a=[1,2,3,4]</code>
+                     <p>that can be generated with the range() function:</p>
+                       <code>a=range(0,4)</code>
+                     <p>You can access to items in a sequences using an index (starting at zero):</p>
+                       <code>>>>a[0]
+                             1</code>
+                     <p>Note also that you can count down using negative indices:</p>
+                       <code>>>>a[-1]  #equivalent to a[3]
+                             4</code>
+                     <p>You cannot use an index out of range. a[4] or a[-4] are wrong.</p>
+                     <p>Slicing can be used to access to a sub list using this syntax:</p>
+                       <code> a[start:end:step]</code>
+                     <p>If start is not provided, the default vale is 0. If end is not provided, the 
+                        default value is the end of the squence. If step is not provided, the default 
+                        value is 1.</p>
+                     <p>An example would be to access the even value of a range:</p>
+                       <code>>>>range(1,11)[::2]
+                             [0,2,4,6,8,10]</code>
+                 </article>
+            </section>
+       
+            <section class="main-section" id="Modules">
+               <header>Modules</header>
+                 <article>
+                     <p>As soon as you want to start a project, you will need to copy your code into a 
+                        file. In python, a file that contains python code is called a <strong>module</strong> and   
+                        it ends with the extension .py. you may notice files ending in pyc. Just ignore 
+                        them. There are compiled files created by Python.</p>
+                     <p>So, a module is just a file where functions and variables are available.</p>
+                     <p>Let us now come back to our toy example. As you may have noticed, the calculation
+                         of the surface will not be precise since we used only 2 digits to define the
+                         constant PI. Python has lots of standard module. To use a module within your 
+                         own module, you need to import it:</p>
+                        <code>>>>import math</code>
+                     <p>It contains lots a functions and constants and in particular the PI constant:</p>
+                        <code>math pi</code>
+                     <p>Now, you can redo the computation and get a more precise value:</p>
+                        <code>surface=math pi*R**2</code>
+                     <p>Note that there are different ways to import modules or functions from a module. 
+                        Instead of importing the entire math module, we could have imported only the PI 
+                        value:</p>
+                        <code>from math import pi</code>
+                     <p>Which makes the syntax even simpler:</p>
+                        <code>surface=pi*R**2</code>
+                     <p>If you want to import everything from a module, you can write:</p>
+                        <code>from math import*</code>
+                     <p>You need to be cautions with this last statement. Indeed, you do not know what 
+                        you are importing. You may have imported a function called surface that will 
+                        overwrite you own variables or functions.</p>
+                     <p>Note that the import statement can be placed anywhere in your code, however, 
+                        there is forbidden within a class or function. It is allowed at module level
+                         only.</p>
+                 </article>
+             </section>
+      
+             <section class="main-section" id="Functions">
+                <header>Functions</header>
+                 <article>
+                     <p>Now, that we know a little bit of Python syntax, it is time to create a re-usable 
+                        funtion to compute the circle surface:</p>
+                       <code>from math import pi
+                             def compute_surface(radius,pi=math.pi):
+                                return pi*radius*radius</code>
+                     <p>note the column at the end of the function declaration and the block indentation. 
+                        This function has one argument and one optional argument (pi). You can call it 
+                        as follows:</p>
+                        <code>surface1=compute_surface(1,pi=3.14)
+                              surface2=compute_surface(1)</code>
+                     <p>You can do much more of course (several outputs, variable number of arguments,..
+                        ..) but that should be enough to start with in this page.</p>
+                </article>
+            </section>
+         
+             <section class="main-section" id="Iterators">
+               <header>Iterators</header>
+                 <article>             
+                     <p>Iterators are objects that can be traversed through all the elements os a 
+                        collection. In python many objects are iterators. The for loop (see next 
+                        section) iterates through objects. you can transform an object into an iterator
+                         using the iter() builtin function.</p>
+                        <code>>>>x=[1,2,3]
+                              >>>y=iter(x)
+                              >>>y.next()
+                              1
+                              >>>y.next()
+                              2
+                              >>>y.next()
+                              3
+                              >>>y.next()
+                              Stoplteration:</code>
+                  </article>
+             </section>
+      
+             <section class="main-section" id="Programming(and_Functional_Programming)">
+               <header>Programming (and Functional Programming)</header>
+                  <article> 
+                      <p>Python has the standard <strong>loop</strong> and <strong>if</strong> but also functional programming 
+                         that are less standard (e.g., list comprehension).</p>
+                  </article>
+             </section>
+      
+             <section class="main-section" id="For_loop">
+               <header>For loop</header>
+                  <article>
+                       <p>You can loop over a sequence as follows:</p>
+                         <code>radius_list=[1.,10.,]
+                               for radius in radius_list:
+                                   surface=compute_surface(radius)</code>
+                       <p>Note again the indentation that delimits the scope of the loop. Hence, 
+                          there is no need for an end keyword. The indentation suffices. Note also 
+                          the way to iterate through the list using the in keyword. Any object that 
+                          is an iterator (such as sequences) can be used in loops like in the example 
+                          above. The radius variable is created by the loop and therefore available 
+                          within the loop.</p>
+                       <p>There is a break statement to stop the iteration of the loop/while loop. You
+                           may indeed face a situation in which you need to exit a loop when an external 
+                          condition is triggered. The break statement causes the program flow to exit 
+                          the body of the while loop and resume the execution of the program at the program 
+                          at the next statement after the while loop. The break statement can be used to  
+                          force an early exit from a loop or to implement a loop with a test to exit in 
+                          the middle of the loop body.Example:</p>
+                          <code>>>>S=0
+                                >>>while(S<100):
+                                   S+=(S+1)**2
+                                   if s>100
+                                      break</code>
+                         <p>Another keyword related to loops is the continue keyword. It returns the 
+                            control to the beginning of the while loop. Instead of continuing the current 
+                            iteration and then returning control to the beginning of the loop, the 
+                            continue statement rejects all the remaining statements in the current iteration 
+                            of the loop and moves the control back to the top of the loop.</p>
+                         <p>There is an optional else statement executed when the loop is over,which is 
+                            hardly used but it is interesting to know its existance. It is not executed 
+                            once the loop is finished (either normally or after a break statement):</p>
+                           <code>>>>for i in[1,2,3]:
+                                      print(i)
+                                    else:
+                                      print("finished")
+                                    1
+                                    2
+                                    3 
+                                    finished</code>
+                         <p>builtin function often used with the for loop are enumerate(), range, xrange 
+                            returns a generator instead of a list, which makes it slightly faster and 
+                            memory more efficient. If you want to loop over a range and print the index 
+                            you could write:</p>
+                            <code>count=0
+                                  for x in xrange(5,10):
+                                     print(x, count)
+                                     count+=1</code>
+                         <p>but in Python, you should use enumerate instead:</p>
+                            <code>for count, x in enumerate(xrange(5,10)):
+                                     print(x,count)</code>
+                         <p>Finally, the while loop works exactly as the for loop. Just replace for by 
+                            while.</p>
+                   </article>
+               </section>
+               
+             <section class="main-class" id="If_condition">
+                <header>If condition</header>
+                    <article>
+                         <p>The following example illustrates the usage of if/elif/else keywords:</p>
+                           <code>radius_list=[1,10,-1]
+              
+                                 for radius in radius_list:
+                                    if radius>0:
+                                       this_surface=compute_surface(radius)
+                                       print("the surface of a circle of radius %s is %s" %(a_radius,
+                                              this_surface))
+                                    elif radius==0:
+                                       print("There is no switch statement in Python, but you can use 
+                                              elif keyword as much as you want.")
+                                    else:
+                                       print("The radius is negative!")</code>
+                        <p>Note-The special keyword in is a membership operator is used to find a 
+                                variable in a sequence and can be used to loop over a sequence.</p>
+                    </article>
+             </section>
+      
+            <section class="main-section" id="Do_while_loop">
+               <header>Do while loop</header>
+                    <article>
+                        <p>There is no such loop in Python. Instead, you can use the while loop
+                           (see above).</p>
+                    </article>
+            </section>
+      
+            <section class="main-section" id="Pass_statement">
+               <header>The pass statement</header>
+                     <article>
+                        <p>It is used when a statement is required but you do not want to do 
+                           anything. Nothing happens when it is called. It is typically used in 
+                           the init function of classes:</p>
+                           <code>>>>class Test():
+                                    def__init__(self):
+                                      pass</code>
+                     </article>
+            </section>
+       
+            <section class="main-section" id="lambda_function">
+                <header>Lambda function</header>
+                     <article>
+                        <p>In Python, lambda function can be used to replace a simple function. This
+                           lambda function is called an anonymous function because they have no name.</p>
+                        <p>To illustrate its syntax and usage, we start from the function defined 
+                           earlier:</p>
+                          <code>>>>from math import pi,sqrt
+                                >>>def compute_surface(radius)
+                                   return pi*radius*radius
+                                >>>compute_surface(sqrt(1/pi))
+                                1</code>
+                        <p>An equivalent code using lambda function is:</p>
+                          <code>>>>from math import pi,sqrt
+                                >>>f=lambda r:pi*r*r
+                                >>>f(sqrt(1/pi))
+                                1</code>
+                        <p>You can use several parameters:</p>
+                          <code>>>>lambda x,y: return x**y</code>
+                   </article>
+             </section>
+      
+            <section class="main-section" id="Zip_function">
+               <header>Zip function</header>
+                   <article>
+                        <p>The zip() function takes one or more sequences as arguments and returns 
+                           a list of tuples. The ith tuple contains the ith values of each sequence. 
+                           If the input sequences do not have the same length, the list is truncated 
+                           to the length of the shortest sequence. This function is often to loop 
+                           over several sequence:</p>
+                           <code>>>>for x,y in zip([1,2,3],[-1,-2,-3]):
+                                    print x+y
+                                 0
+                                 0
+                                 0</code>
+                   </article>
+             </section>
+      
+             <section class="main-section" id="reduce">
+                <header>Reduce function</header>
+                   <article>
+                       <p>The reduce() function is not very common but could be useful. It applies a 
+                          function of two arguments cumulatively to the items of a sequence. The following
+                          example computes the factorial:</p>
+                          <code>>>>reduce(lambda x,y: x*y, [1,2,3,4,5])
+                                120</code>
+                   </article>
+             </section>
+      
+            <section class="main-section" id="filter">
+               <header>Filter</header>
+                   <article>
+                       <p>The filter() function is often used with the lambda function. Its usage is:</p>
+                          <code>filter(function,sequence)</code>
+                       <p>It returns the items of the sequence for which function(item) is true. For
+                           instance the following lambda function returns True if x is even:</p>
+                          <code>f=lambda x: x%2==0</code>
+                       <p>Which can be used within the filter</p>
+                          <code>>>>f=lambda x: x%2==0
+                                >>>filter(f,[0,3,6,9])
+                                [0,6]</code>
+                       <p>In new version of Python, list comprehension can be used to replace filter. The 
+                          following statement are equivalent:</p>
+                          <code>>>>filter(func, seq)
+                                >>>[x for x in seq if func(x)]</code>
+                   </article>
+             </section>
+               
+               <section class="main-section" id="Exceptions">
+              <header>Exceptions</header>
+                   <article>
+                       <p>This section may not be for beginners anymore. You can code without knowing
+                          anything about Exceptions. However, you will see error messages for sure while
+                          playing with Python. Error messages are exceptions. In Pyhton, there are many
+                          exceptions by default that can be used to catch errors. This is done using the
+                          try/except code blocks. Optional finally/else blocks may be used.</p>
+                          <code>>>>try:
+                                   1/0  #There is a ZeroDivisionError exception in Python
+                                >>>except ZeroDivisionError, e:
+                                   print('Your own error message')
+                                   print(e)   #The ZeroDivisionError message
+                                >>>finally:
+                                   print('The optional finally block always executes after the try/except blocks.')
+                                   #this is useful to close a file.
+                                >>>else:
+                                   print('The optional else block is executed after the try block')</code>
+                       <p>If you do not know the type of error, you can use this syntax:</p>
+                          <code>>>>try:
+                                   1/0
+                                >>>except e:
+                                   pass</code>
+                    </article>
+              </section>
+      
+              <section class="main-section" id="object_oriented_language">
+                  <header>An object-oriented language</header>
+                     <article>
+                       <p>Python is an object oriented language. Everything is an object (list, generator, 
+                          exception....). Here is avery simple example that should help you starting with 
+                          classes. Python offers most of the object-oriented tools that comes with other
+                          object-oriented languages from inheritance to operator overloading.</p>
+                     </article>
+              </section>
+      
+             <section class="main-section" id="class">
+                <header>Class</header>
+                     <article>
+                       <p>New claass style should inherit from the object class.</p>
+                         <code>class MyClass(object):
+      
+                                # a class variable
+                                  counter=0
+            
+                                #The construtor
+                               def __init__(self, arg1, arg2=0)
+                                  self.arg1=arg1
+                                  self.__arg2=arg2
+      
+                               def a_method(self):
+                                  print('something')
+      
+                               def __str__(self):
+                                  return('There are %s instances' %self.counter)</code>
+                        <p>Here, counter is a class variable shared by all instances whereas arg1 is an instance
+                           variable. You then declare instances as follows:</p>
+                           <code>>>>c1=MyClass(1)
+                                 >>>c2=MyClass(2, arg2=3)
+                                 >>>print(c1)
+                                 'There are 2 instances'
+                                 >>>c2.counter
+                                 2.</code>
+                        <p>If you use the double underscore prefix such as __arg2, Python uses name-mangling to
+                           make it a private variable. However, you can still access to it if you want, so this
+                           is not a pure private data.</p>
+                     </article>
+              </section>
+      
+              <section class="main-section" id="inheritance">
+                 <header>Inheritance</header>
+                      <article>
+                        <p>Here is an example of base and derived classes</p>
+                          <code>class Tree(object):
+             
+                                   def __init__(self, name):
+                                      self.name=name
+      
+                                   def __str__(self):
+                                      return 'name:'+self.name
+      
+                                class FruitTree(Tree):
+                            
+                                   def __init__(self, name, fruit_size)
+                                      super(FruitTree, self).__init__(name)
+                                      self.fruit_size=fruit_size
+      
+                                   def __str__(self):
+                                      msg=super(FruitTree, self).__str__()
+                                      msg+='\nIts fruit size is:'+self.fruit_size</code>
+                       <p>The inheritance is made thanks to the function super. Since functions are virtual the
+                          function __str__ in the Child class replaces the one defined in the parent class.</p>
+                   </article>
+              </section>
+      
+              <section class="main-section" id="statements">
+                 <header>Statements</header>
+                 <header>Single statement block</header>
+                   <article>
+                       <p>In general, a statement ends at the end of the line. There is no request foe s special
+                          character such as semi column. However, you can use it  if you want. The two following
+                          lines are equivalent:</p>
+                          <code>a=1
+                                a=1;</code>
+                       <p>Of course, there is no interest to add a semi column in such case, which explain why
+                          you hardly see the semi column in Python code. However, you may want to write several
+                          statements on the same line:</p>
+                          <code>a=1;b=2</code>
+                       <p>When a loop or if block statement is made of a single line, you may want to write it
+                          that way:</p>
+                          <code>if i>0:print 1./float(i)</code>
+                   </article>
+               <header>Multiple statements</header>
+                   <article>
+                       <code>>>>a,b,c=1,2,3
+                                >>>print(b)
+                                2
+                                >>>print(c)
+                                3</code>
+                   </article>
+              </section>
+       
+             <section class="main-section" id="comment">
+                 <header>Comment</header>
+                    <article>
+                       <p>Use the # sign anywhere or quotes:</p> 
+                          <code>>>>#This is a comment
+                                >>>a=1 #another one
+                                >>>"""a very long comment..........
+                                .......on several lines if needed"""</code>
+                    </article>
+                <header>Boolean</header>
+                    <article>
+                       <p>Python has a boolean type. The False and True statement are coded as:</p>
+                          <code>>>>a=False
+                                >>>b=True
+                                >>>a==b
+                                False</code>
+                    </article>
+              </section>                    
+      
+       </main>      
+    </body>
+</html>
